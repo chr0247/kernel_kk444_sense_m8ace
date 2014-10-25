@@ -491,12 +491,22 @@ static void htc_8974_add_usb_devices(void)
 	android_usb_pdata.product_id	= 0x0643;
 #elif defined(CONFIG_MACH_DUMMY)
 	android_usb_pdata.product_id	= 0x063A;
+#elif defined(CONFIG_MACH_MEC_TL)
+	android_usb_pdata.product_id	= 0x0635;
+#elif defined(CONFIG_MACH_MEC_UL)
+	android_usb_pdata.product_id	= 0x0638;
+#elif defined(CONFIG_MACH_MEC_DUG)
+	android_usb_pdata.product_id	= 0x0636;
 #elif defined(CONFIG_MACH_DUMMY)
 	android_usb_pdata.product_id	= 0x0634;
 #elif defined(CONFIG_MACH_DUMMY)
 	android_usb_pdata.product_id	= 0x0642;
 #elif defined(CONFIG_MACH_DUMMY)
 	android_usb_pdata.product_id	= 0x0642;
+#elif defined(CONFIG_MACH_MEC_DWG)
+	android_usb_pdata.product_id	= 0x0644;
+#elif defined(CONFIG_MACH_MEC_WHL)
+	android_usb_pdata.product_id	= 0x0646;
 #else
 	
 #endif
