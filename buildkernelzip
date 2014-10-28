@@ -9,13 +9,13 @@ kernelDir1="~/Android/kernel_image/htc_m8ace_kernel_kk444_sense" #( Example /hom
 kernelDir2="~/Android/kernel_image/htc_m8ace_kernel_kk444_sense" #( Example /home/user/path )
 kernelDir3="Path to kernel 3" #( Example /home/user/path )
 #Toolchain path
-toolchainDir="~/gcc/arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.09" #( Example /home/user/path )
+toolchainDir="~/gcc/arm-cortex_a15-linux-gnueabihf-linaro_4.9.2-2014.10" #( Example /home/user/path )
 #Path where you would like the kernel to be outputed
 exportDir="/home/schqiushui/Android/kernel_image/m8ace_out/kk444/" #( Example /home/user/Desktop )
 #Change default to what ever you like
 
-kernel1name="SchKernel-m8ace-kk444-sense-1.00"
-kernel2name="SchKernel-m8ace-kk444-sense-1.00"
+kernel1name="SchKernel-m8ace-kk444-sense-2.00"
+kernel2name="SchKernel-m8ace-kk444-sense-2.00"
 kernel3name="Default-3"
 #Do not edit
 now=$(date +"%m-%d-%Y-%H-%M")
@@ -83,23 +83,23 @@ echo
 echo
 echo
 echo " Moved zImage "
-cp arch/arm/boot/zImage ~/Android/schmkbootimg_tools/m8ace-kk444
+cp arch/arm/boot/zImage ~/Android/mkbootimg_tools/m8ace-kk444
 
 echo
 echo
 echo " Moved dt.img "
-cp arch/arm/boot/dt.img ~/Android/schmkbootimg_tools/m8ace-kk444
+cp arch/arm/boot/dt.img ~/Android/mkbootimg_tools/m8ace-kk444
 
 echo
 echo
 echo " Moving modules "
 find -iname *.ko | xargs cp -t ~/Android/kernel_image/htc_m8ace_kernel_kk444_sense/system/lib/modules
-cd ~/Android/schmkbootimg_tools
+cd ~/Android/mkbootimg_tools
 
 echo
 echo
 echo " Making a boot.img ya'll "
-./mkboot m8ace boot.img
+./mkboot m8ace-kk444 boot.img
 
 echo
 echo
